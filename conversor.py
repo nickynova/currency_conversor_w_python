@@ -18,6 +18,7 @@ def foreign_exchange_calculator(amount, main_currency, foreign_currency):
         return usd_to_mxn_rate * amount 
     elif main_currency == 'usd' and foreign_currency == 'cop':
         return usd_to_cop_rate * amount 
+        
    
 
 def run():
@@ -26,15 +27,15 @@ def run():
     print('insert the Currency as its short form ex: cop, usd, mxn')
     print('')
 
-    amount = float(input('insert the amount: '))
+    amount = int(input('insert the amount: '))
 
-    main_currency = input('insert your currency: ')
+    main_currency = input('insert the main currency: ')
 
     foreign_currency = input('insert the currency you want to convert to: ')
 
     result = foreign_exchange_calculator(amount, main_currency, foreign_currency)
 
-    print('${} ' + foreign_currency + ' is ' + '${} ' + main_currency.format(amount, result))
+    print(amount, main_currency + ' is ' + str(result), foreign_currency)
 
 
 if __name__ == "__main__":
